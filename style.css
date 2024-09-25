@@ -1,3 +1,5 @@
+/** @format */
+
 body {
   font-family: Arial, sans-serif; /*Set the font */
   background-color: #7f1010; /* Dark red background */
@@ -11,7 +13,7 @@ body {
   background: yellow; /* Yellow background for the container */
   padding: 20px; /* Padding inside the container */
   border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
+  box-shadow: 0 0 10px rgba(240, 244, 7, 0.977); /* Light shadow around the container */
 }
 
 h1 {

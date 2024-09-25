@@ -1,11 +1,9 @@
-/** @format */
-
 body {
   font-family: Arial, sans-serif; /*Set the font */
   background-color: #7f1010; /* Dark red background */
   margin: 0; /* Remove default margin */
   padding: 20px; /* Add padding around the body */
-} /* End of body style */
+}
 
 .container {
   max-width: 600px; /*Maximum width of the container */

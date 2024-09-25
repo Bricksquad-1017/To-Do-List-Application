@@ -1,18 +1,28 @@
+
 <!DOCTYPE html>
-<<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To-Do List Application</title>
-        <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
-    </head>
-    <body>
-        <div class="container"> <!-- Yellow container -->
-            <input type="text" id="taskInput" placeholder="Enter a task" />
-            <button id="addTaskButton">Add Task</button>
-            <ul id="taskList"></ul>
-        </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <title>To-Do List Application</title>
+</head>
+<body>
+ <h1>To-Do List Application</h1>
+ 
+   <div class="container">
+	<h2>To-Do Tasks</h2>
+	 <input type="text" id="taskInput" placeholder="Add Task">
+	 <button onclick="addTask()">Add Task</button>
+	 <ul id="todoList"></ul>
+   </div>
+ 
+   <div class="container completed">
+	 <h2>Completed Tasks</h2>
+	 <ul id="completedList"></ul>
+   </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
+

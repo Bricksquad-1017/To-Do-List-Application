@@ -1,64 +1,102 @@
-/** @format */
-
+/* Reset default browser styles */
 body {
-  font-family: Arial, sans-serif; /* Set the font */
-  background-color: #7f1010; /* Dark red background */
-  margin: 0; /* Remove default margin */
-  padding: 20px; /* Add padding around the body */
-} /* End of body styling */
+    font-family: Arial, sans-serif;
+    background-color: #e0f2e0; /* Display a light green background */
+}
 
+/* Title styles */
+h1 {
+    text-align: center; /* Center the title */
+    color: #333; /* Dark grey color for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Container styles */
 .container {
-  max-width: 600px; /* Maximum width of the container */
-  margin: auto; /* Center the container */
-  background: yellow; /* Yellow background for the container */
-  padding: 20px; /* Padding inside the container */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
+    max-width: 600px; /* Maximum width of the container */
+    margin: auto; /* Center the container */
+    background: #66ff66; /* Bright green background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
 }
 
+/* Input styles */
 input[type="text"] {
-  padding: 10px; /* Padding inside the input */
-  border: 1px solid #ccc; /* Light grey border */
-  border-radius: 5px; /* Rounded corners */
-  width: calc(100% - 22px); /* Full width minus padding and border */
-  margin-bottom: 10px; /* Space below the input */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    margin-bottom: 10px; /* Space below the input */
 }
 
+/* Button styles */
 button {
-  width: 100px; /* Width of the button */
-  padding: 10px;
-  background-color: darkgreen; /* Dark green button */
-  color: white; /* White text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Cursor on hover */
+    width: 100px; /* Width of the button */
+    padding: 10px; /* Padding inside the button */
+    background-color: #004d00; /* Dark green button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+} /* Added missing closing brace */
+
+
+/* Yellow container styles */
+.container {
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    transition: all 0.3s ease; /* Transition for smooth animation */
 }
 
+/* Hover effect for yellow container */
 button:hover {
-  background-color: darkred; /* Dark red on hover */
+    background-color: #003300; /* Darker green on hover */
 }
 
+/* Task list item styles */
+.completed {
+    background-color: #e0f7fa; /* Light blue for completed tasks */
+}
+
+/* Task list styles */
 ul {
-  list-style-type: none; /* No bullets */
-  padding: 0; /* Remove default padding */
+    list-style-type:circle; /* Use circle bullets */
+    padding: 0; /* Remove default padding */
 }
 
+/* Task list item styles */
 li {
-  background: white; /* White background for list */
-  margin: 10px 0; /* Margin around the list items */
-  padding: 10px; /* Padding inside the list items */
-  border-radius: 5px; /* Rounded corners */
-  display: flex; /* Flexbox layout */
-  justify-content: space-between; /* Space between items */
-  border: 1px solid grey; /* Grey border around list items */
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  transition: all 0.3s; /* Smooth transition for all properties */
+    background: #004d00; /* Dark green for the first task */
+    color: white; /* Set text color to white for better contrast */
+    margin: 10px 0; /* Margin around the list items */
+    padding: 10px; /* Padding inside the list items */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    border: 1px solid grey; /* Grey border around list items */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: all 0.3s; /* Smooth transition for all properties */
 }
 
-ul li:nth-child(odd) {
-  background: #f9f9f9; /* Light grey background for odd list items */
-}
-
+/* Hover effect for task list items */
 li:hover {
-  background-color: darkgreen; /* Dark green background on hover */
+    background-color: #5cb85c; /* Optional hover effect */
+}
+
+/* First task box styles */
+li:first-child {
+    border: 2px solid #66ff66; /* Bright green border for the first task */
+}
+
+/* Second task box styles */
+li:nth-child(2) {
+    background: #66ff66; /* Bright green background for the second task */
+}
+
+/* Third and subsequent task box styles */
+li:nth-child(n+3) {
+    background: #b2e0b2; /* Pastel green background for third and subsequent tasks */
 }

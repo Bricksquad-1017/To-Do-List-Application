@@ -2,12 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "name": "Launch Extension",
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ],
+      "preLaunchTask": "npm",
+      "request": "launch",
+      "type": "extensionHost"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "lldb",
       "request": "launch",
       "args": [],
       "cwd": "/Users/Bricksquad-1017/Documents/To-Do List Application",
-      "program": "/Users/Bricksquad-1017/Documents/To-Do List Application/build/Release/outRelease"
+      "program": "/Users/Bricksquad-1017/Documents/To-Do List Application/build/Release/outRelease",
+      "preLaunchTask": "build"
     }
   ]
 }

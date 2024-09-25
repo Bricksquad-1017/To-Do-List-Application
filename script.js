@@ -6,6 +6,23 @@ function loadTasks() {
     });
 }
 
+// Function to move a task to the completed list
+function moveToCompleted(task) {
+    const completedList = document.getElementById('completedList');
+
+    // Add animation
+    task.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+    task.style.transform = 'translateX(100%)'; // Move to the right
+    task.style.opacity = 0; // Fade out
+
+    setTimeout(() => {
+        completedList.appendChild(task);
+        task.style.transition = 'none'; // Reset for next click
+        task.style.transform = 'none'; // Reset position
+        task.style.opacity = 1; // Reset opacity
+    }, 500); // Match the duration of the animation
+}
+
 // Function to add a task to the DOM
 function addTaskToDOM(taskText) {
     const li = document.createElement('li'); // Create a new list item
@@ -45,3 +62,29 @@ document.getElementById('addTaskButton').addEventListener('click', function() {
 
 // Load tasks when the page is loaded
 window.onload = loadTasks;
+
+// Step 3.1: Get references to the input field, button, and task list
+const taskInput = document.getElementById('taskInput');
+const addTaskButton = document.getElementById('addTaskButton');
+const taskList = document.getElementById('taskList');
+
+// Step 3.2: Function to add a task
+function addTask() {
+    const taskText = taskInput.value.trim(); // Get the input value and trim whitespace
+    if (taskText) { // Check if the input is not empty
+        const li = document.createElement('li'); // Create a new list item
+        li.textContent = taskText; // Set the text of the list item
+        taskList.appendChild(li); // Add the list item to the task list
+        taskInput.value = ''; // Clear the input field
+    }
+}
+
+// Step 3.3: Event listener for the button click
+addTaskButton.addEventListener('click', addTask);
+
+// Step 3.4: Event listener for the "Enter" key press
+taskInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') { // Check if the pressed key is "Enter"
+        addTask(); // Call the addTask function
+    }
+});

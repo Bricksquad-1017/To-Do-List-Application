@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/Bricksquad-1017/Documents/To-Do List Application",
+      "program": "/Users/Bricksquad-1017/Documents/To-Do List Application/build/Release/outRelease"
+    }
+  ]
+}

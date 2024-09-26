@@ -20,6 +20,7 @@ function moveToCompleted(task) {
         task.style.transition = 'none'; // Reset for next click
         task.style.transform = 'none'; // Reset position
         task.style.opacity = 1; // Reset opacity
+        removeTaskFromStorage(task.textContent); // Remove from localStorage
     }, 500); // Match the duration of the animation
 }
 
@@ -28,8 +29,7 @@ function addTaskToDOM(taskText) {
     const li = document.createElement('li'); // Create a new list item
     li.textContent = taskText; // Set the text of the list item
     li.addEventListener('click', function() {
-        this.remove(); // Remove the task from the DOM
-        removeTaskFromStorage(taskText); // Remove from localStorage
+        moveToCompleted(this); // Move the task to the completed list
     });
     document.getElementById('taskList').appendChild(li); // Append the list item to the task list
 }

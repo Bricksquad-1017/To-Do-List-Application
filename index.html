@@ -80,30 +80,5 @@
         margin-top: 10px; /* Space above the button */
     }
 </style>
-
-
-       <script>
-           function addTask() {
-               const taskInput = document.getElementById('taskInput');
-               const taskValue = taskInput.value;
-
-               if (taskValue) {
-                   const li = document.createElement('li');
-                   li.textContent = taskValue;
-                   li.onclick = function() {
-                       completeTask(li);
-                   };
-                   document.getElementById('taskList').appendChild(li);
-                   taskInput.value = '';
-               }
-           }
-
-           function completeTask(taskItem) {
-               const completedList = document.getElementById('completedList');
-               completedList.appendChild(taskItem);
-               taskItem.onclick = null; // Disable click after completion
-           }
-       </script>
-   </body>
 </html>
    

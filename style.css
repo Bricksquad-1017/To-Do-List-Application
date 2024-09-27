@@ -39,8 +39,12 @@ button {
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Cursor on hover */
-} /* Added missing closing brace */
+}
 
+/* Hover effect for yellow container */
+button:hover {
+    background-color: #003300; /* Darker green on hover */
+}
 
 /* Yellow container styles */
 .container {

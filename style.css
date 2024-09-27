@@ -101,6 +101,11 @@ li:nth-child(2) {
 }
 
 /* Third and subsequent task box styles */
+/* Third and subsequent task box styles */
 li:nth-child(n+3) {
     background: #b2e0b2; /* Pastel green background for third and subsequent tasks */
+}
+
+#task-list li {
+    background-color: #ffffff; /* Specific to list items in task list */
 }

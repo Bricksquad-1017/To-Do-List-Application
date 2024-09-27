@@ -97,9 +97,160 @@ li:first-child {
 
 /* Second task box styles */
 li:nth-child(2) {
+    border: 2px solid #ffcc00; /* Yellow border for the second task */
+}
+
+/* Third task box styles */
+li:nth-child(3) {
+    border: 2px solid #ff6600; /* Orange border for the third task */
+}
+
+/* Fourth task box styles */
+li:nth-child(4) {
+    border: 2px solid #ff0000; /* Red border for the fourth task */
+}
+
+/* Task list item text styles */
+span {
+    margin-right: 10px; /* Space between bullet and text */
+}
+
+/* Task list item delete button styles */
+.delete-btn {
+    background-color: #ff0000; /* Red delete button color */
+    color: white; /* White text color for better contrast */
+    padding: 5px 10px; /* Padding inside the delete button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Hover effect for delete button */
+.delete-btn:hover {
+    background-color: #b30000; /* Darker red on hover */
+}
+</style>
+<body>
+<h1>Task List</h1>
+
+<div class="container">
+    
+        <input type="text" id="task-input" placeholder="Enter a new task...">
+        <button id="add-task">Add Task</button>
+    
+<ul id="task-list">
+    
+</ul>
+
+</div>
+
+<script>
+// Get references to HTML elements
+var addTaskBtn = document.getElementById("add-task");
+var taskInput = document.getElementById("task-input");
+var taskList = document.getElementById("task-list");
+
+// Add event listener for add task button
+addTaskBtn.addEventListener("click", function() {
+
+    // Create a new list item
+    var listItem = document.createElement("li");
+
+    // Add a span element with the input value
+    var span = document.createElement("span");
+    span.textContent = taskInput.value;
+    listItem.appendChild(span);
+
+    // Add a delete button
+    var deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "delete-btn";
+    listItem.appendChild(deleteBtn);
+
+    // Add event listener for delete button
+    deleteBtn.addEventListener("click", function() {
+        listItem.remove();
+    });
+
+    // Add event listener for list item
+    listItem.addEventListener("click", function() {
+        if (listItem.className === "completed") {
+            listItem.classList.remove("completed");
+        } else {
+            listItem.classList.add("completed");
+        }
+        
+        // Move the completed task to the bottom of the list
+        taskList.appendChild(listItem);
+        
+        // Remove the event listener from the completed task
+        listItem.removeEventListener("click", arguments.callee);
+        
+        // Add a new event listener to the new list item
+        listItem.addEventListener("click", function() {
+            if (listItem.className === "completed") {
+                listItem.classList.remove("completed");
+            } else {
+                listItem.classList.add("completed");
+            }
+            
+            // Move the completed task to the bottom of the list
+            taskList.appendChild(listItem);
+            
+            // Remove the event listener from the completed task
+            listItem.removeEventListener("click", arguments.callee);
+            
+            // Add a new event listener to the new list item
+            this.addEventListener("click", arguments.callee);
+        });
+        
+    });
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+});
+
+</script>
+</body>
+</html>
+li:nth-child(2) {
     background: #66ff66; /* Bright green background for the second task */
 }
 
+/* Updated selector with class */
+.task-item:nth-child(2) {
+    background: #66ff66; /* Bright green background for the second task */
+    
+}
 /* Third and subsequent task box styles */
 /* Third and subsequent task box styles */
 li:nth-child(n+3) {

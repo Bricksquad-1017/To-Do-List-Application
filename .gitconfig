@@ -1,0 +1,11 @@
+[user]
+	name = Bricksquad-1017
+	email = cervantes.miguel1017@icloud.com
+[core]
+	editor = code --wait
+[init]
+	defaultBranch = master
+[color]
+	ui = auto
+[credential]
+	helper = cache

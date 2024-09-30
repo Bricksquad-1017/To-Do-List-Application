@@ -31,3 +31,8 @@ function markAsCompleted(todoItem) {
     });
     completedTasks.appendChild(todoItem);
 }
+
+// script.js
+document.getElementById('animateButton').addEventListener('click', function() {
+    alert('Button clicked!');
+});

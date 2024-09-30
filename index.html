@@ -1,5 +1,4 @@
-
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,24 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>My To-Do List</h1>
+  <header>
+    <h1>My To-Do List</h1>
+  </header>
+ <main>
     <input type="text" id="todo-input" placeholder="Add a new task">
-    <button id="add-todo">Add</button>
-    <ul class="todo-list" id="todo-list"></ul>
+    <button id="add-todo">Add</button
+    <!-- Tasks Section -->
+    <section class="task-section">
         <h2>Tasks</h2>
         <ul id="taskList"></ul>
-    
-        <div class="container"></div>
+    </section>
+  </main>
+  <footer>
+    <!-- Active Tasks Section -->
+    <section class="task-section">
         <h2>Active Tasks</h2>
         <ul class="todo-list" id="active-tasks"></ul>
-    </div>
-
-    <div class="container">
+    </section>
+   </main>
+    <!-- Completed Tasks Section -->
+    <section class="task-section">
         <h2>Completed Tasks</h2>
         <ul class="todo-list" id="completed-tasks"></ul>
-    </div>
-
+    </section>
+<footer>
+  <p>2024 My App</p>  
+</footer>
+    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 </html>
-   

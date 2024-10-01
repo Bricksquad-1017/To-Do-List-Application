@@ -3,53 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Get Er' Done!</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>My To-Do List</h1>
+        <h1>Get Er' Done!</h1>
     </header>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li>
-                <a href="#active-tasks">Active Tasks</a>
-            </li>
-            <li>
-                <a href="#completed-tasks">Completed Tasks</a>
-            </li>
-            <li>
-                <a href="#all-tasks">All Tasks</a>
-                <ul class="dropdown">
-                    <li><a href="#taskList">View All Tasks</a></li>
-                    <li><a href="#active-tasks">View Active Tasks</a></li>
-                    <li><a href="#completed-tasks">View Completed Tasks</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+
     <main>
-        <div>
-            <input type="text" id="taskinput" placeholder="Write your to-do here...">
-            <button id="AddTask">Add Task</button>
-        </div>
-        <section class="task-section">
-            <h2>Tasks</h2>
-            <ul id="taskList"></ul>
+        <h2>Keep Track of Your Projects</h2>
+        <p>Manage your projects, deadlines, and tasks efficiently.</p>
+        
+        <!-- Example project management UI content -->
+        <section class="project-list">
+            <h3>Your Projects</h3>
+            <ul>
+                <li>Project 1 - Due Date: 2024-10-05</li>
+                <li>Project 2 - Due Date: 2024-11-12</li>
+                <!-- Add more projects as needed -->
+            </ul>
         </section>
-        <section class="task-section">
-            <h2>Active Tasks</h2>
-            <ul class="todo-list" id="active-tasks"></ul>
-        </section>
-        <section class="task-section">
-            <h2>Completed Tasks</h2>
-            <ul class="todo-list" id="completed-tasks"></ul>
-        </section>
+
+        <nav></nav>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Tools</a>
+            <ul class="dropdown">
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="project_management.html">Project Management</a></li>
+                <li><a href="subscription_watcher.html">Subscription Watcher</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+</nav>
     </main>
-    <footer>
-        <p>Thank you for using.</p>  
-    </footer>
-    <script src="script.js"></script>
+
 </body>
 </html>
